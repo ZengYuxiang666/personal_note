@@ -1,0 +1,202 @@
+{
+  "main": {
+    "id": "dd67afe2501822ff",
+    "type": "split",
+    "children": [
+      {
+        "id": "95c3bf738b8a83d3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3f0d3769b2cfa8da",
+            "type": "leaf",
+            "state": {
+              "type": "mindmapview",
+              "state": {
+                "file": "考研/英语/英语大作文模板.md"
+              },
+              "icon": "blocks",
+              "title": "英语大作文模板"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "322c7b59aa25b8f1",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "01ff063da6baac5b",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "byCreatedTimeReverse",
+            "autoReveal": true,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-folder-closed",
+          "title": "文件列表"
+        }
+      },
+      {
+        "id": "850e5880e2d02656",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "搜索"
+        }
+      },
+      {
+        "id": "6b8e067cd76c02eb",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-tags",
+          "title": "标签"
+        }
+      },
+      {
+        "id": "bad5e58e0dd25afc",
+        "type": "leaf",
+        "state": {
+          "type": "all-properties",
+          "state": {
+            "sortOrder": "frequency",
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-archive",
+          "title": "添加笔记属性"
+        }
+      },
+      {
+        "id": "a3d56a6c188dc6fe",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {},
+          "icon": "lucide-bookmark",
+          "title": "书签"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "628089efe7acffa7",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "9e8a23d07dc75939",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "考研/数学/每日一背.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-coming-in",
+          "title": "反向链接"
+        }
+      },
+      {
+        "id": "0e7942d07a50dbc3",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "考研/408/计算机组成原理.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "出链"
+        }
+      },
+      {
+        "id": "567b50802fbb7583",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "考研/408/计算机组成原理.md",
+            "followCursor": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-list",
+          "title": "大纲"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "3f0d3769b2cfa8da",
+  "lastOpenFiles": [
+    "考研/408/操作系统/操作系统.md",
+    "考研/408/计算机网络/计算机网络-树形思维导图.md",
+    "考研/408/数据结构/数据结构-树形思维导图.md",
+    "考研/数学/每日一背.md",
+    "考研/英语/英语大作文模板.md",
+    "考研/408/计算机组成原理/计算机组成原理-树形思维导图.sync-conflict-20261002-145520-TLLBXAY.md",
+    "考研/数学/未命名思维导图.md",
+    "考研/数学/大观/二重积分大观.md",
+    "考研/数学/大观/一元积分应用大观.md",
+    "考研/数学/大观/多元微分大观.md",
+    "考研/数学/大观/一元微分大观.md",
+    "考研/数学/大观/线代大观.md",
+    "考研/数学/线性代数/线代强化.md",
+    "金融/币安alpha上合约且市值低没太涨过.md",
+    "金融/交易标的.md",
+    "考研/408/计算机组成原理/计算机组成原理-树形思维导图.md",
+    "考研/数学/基础30讲/第二章：数列极限.md",
+    "考研/数学/基础30讲/第一章：函数极限与连续.md",
+    "考研/408/数据结构/数据结构-树形思维导图.sync-conflict-20260928-173148-TLLBXAY.md",
+    "考研/数学/大观/未命名思维导图.md",
+    "考研/数学/线性代数/线代基础.md",
+    "考研/数学/计算错误   每算一步立马检查一步，不跳步.md",
+    "考研/408/计算机网络/计算机网络-树形思维导图.sync-conflict-20260907-215224-TLLBXAY.md",
+    "考研/数学/660/一元函数微分学.md",
+    "考研/数学/660/函数极限与数列极限.md",
+    "考研/英语/未命名思维导图.md",
+    "未命名.base",
+    "hhh.drawio.png"
+  ]
+}

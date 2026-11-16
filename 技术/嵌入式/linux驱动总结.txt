@@ -1,0 +1,92 @@
+make mrproper  会清除所有由 make 生成的中间文件，包括 .config 配置文件、编译输出、模块、符号表等。
+make clean 删除大部分 .o、.ko 等编译产物，但保留 .config 和部分构建状态。
+变量在代码中被编译器变成了地址，cpu就会从这个地址中找，_bass_start _bass_end只是给编译器说明要将变量的值放到指定的地址范围内
+
+CROSS_COMPILE=/home/ubuntu/linux/rk3568_linux_5.10/prebuilts/gcc/linux-x86/aarch64/gcc-arm-10.3-2021.07-x86_64-aarch64-none-linux-gnu/bin/aarch64-none-linux-gnu-
+
+编译和打包镜像：
+export RK_ROOTFS_SYSTEM=buildroot
+sudo ./build.sh all
+sudo ./build.sh firmware
+sudo ./build.sh update.img
+
+使用menuconfig：
+export ARCH=arm64
+make menuconfig
+
+
+要修改config文件:
+export ARCH=arm64    注意看左上角
+make menuconfig
+cp .config arch/arm64/configs/rockchip_linux_defconfig   在讯为的源码中用的是这个路径下的配置文件，所有要覆盖
+
+编译buildroot上的qt程序：
+/home/topeet/zyx/linux/rk3568_linux_5.10/buildroot/output/rockchip_rk3568/host/bin/qmake      先用buildroot中的交叉编译工具链中的qmake来生产Makefile文件
+make   编译生成可执行文件
+
+虚拟地址（Virtual Address）是操作系统为每个进程或内核运行环境提供的一种逻辑地址，它并不是内存的实际物理位置，而是经过映射后由硬件（MMU，内存管理单元）转换为物理地址来访问内存。
+
+原子变量：操作要么完全执行完毕，要么完全不执行，不会被中断或被其他线程插入。
+
+自旋锁应用举例：当多个进程要打开同一个设备时，可以在设备的open函数中加入自旋锁，当一个进程用了这个设备的临界资源时，另一个设备不会操作，保证了原子性
+
+信号量：
+down()	阻塞等待，不可中断  不可中断是只能拿到信号量才会结束进程，不会被ctrl + c等打断
+down_interruptible()	阻塞等待，可中断   当信号量为0，把当前进程加入等待队列，设置状态为 TASK_INTERRUPTIBLE，调度器切换出去
+down_trylock()	非阻塞，拿不到锁立即返回
+up()    会唤醒等待队列中的一个或多个进程，这些被唤醒的进程将被加入 CPU 的运行队列（run queue），等待调度执行 
+
+
+
+网络设备：PCIe->网卡主控芯片(mac控制器，BMA&Buffer，逻辑控制&中断模块)->接口连接(MII / RGMII / RMII 等)->PHY芯片->RJ网线接口
+PCLe:连接主机（如 CPU/内存）和网卡，是数据进出网卡的通道。主机通过它将要发送的数据写入网卡，或从网卡读取接收的数据。
+MAC 控制器（MAC Controller）：封装发送数据帧，加上 MAC 地址等信息；解封装接收到的以太网帧；处理帧校验、帧过滤、冲突检测等功能。
+DMA & Buffer（直接内存访问与缓冲区）：管理数据在主机内存与网卡之间的高速传输；缓冲收发队列，减少 CPU 干预，提高效率。
+控制逻辑 & 中断模块：控制整个网卡工作流程；响应主机发来的配置指令；产生中断通知 CPU 数据已收发完毕。
+接口连接：这是 MAC 和 PHY 之间的标准化连接接口，负责将数字帧数据传输给 PHY，或者从 PHY 接收信号后的解码数据。
+PHY 芯片：将来自 MAC 的数字数据转换为模拟电信号
+RJ45 网线接口：最终的数据通过以太网电缆从 RJ45 接口发送到其他网络设备；
+MDIO（Management Data Input/Output）是一种串行管理总线，用来配置和监控 PHY 芯片。
+网卡通过其内部的MAC控制器构建并管理数据帧，再由PHY芯片将这些帧转换为电信号在网线上发送，实现主机与网络之间的数据收发。
+mac控制器实现了数据链路层吗，其他层是由操作系统实现的
+
+OSI 层	实现方式	说明
+第7层 应用层	应用程序	如浏览器、curl
+第6层 表示层	操作系统 / 应用	格式转换（非典型）
+第5层 会话层	操作系统	建立连接、会话管理
+第4层 传输层	操作系统	TCP、UDP 协议处理
+第3层 网络层	操作系统	IP 地址、路由选择
+第2层 数据链路层	上半：操作系统，MAC控制：硬件	协议封装、地址解析、帧构建
+第1层 物理层	PHY 芯片（硬件）	电信号发送接收
+
+Linux 将 CAN 归类为网络设备，是因为它也通过帧在多个节点之间通信，可以很好地复用内核现有的网络抽象与接口体系，从而提高通用性和扩展性。
+
+
+当你写好 platform 驱动并通过 insmod 加载模块时，内核会将该驱动注册到 platform 总线。这时，总线会遍历系统中所有已注册的 platform 设备，调用其 match() 函数尝试匹配。匹配成功后，platform 总线会调用该驱动的 probe() 函数，对应的设备就此被驱动，并建立 device-driver 的绑定关系。
+
+你写的每一个特定的总线驱动（例如platform_driver和i2c_driver等）都是对driver这个结构体的进一步封装，在调用每个总线的注册函数时，会初始化driver这个结构体，例如将platform_driver的probe函数赋给driver的probe函数指针，还有给driver的bus_type赋值等（例如假如是i2c驱动就赋i2c_bus_type），bus_type中有特定总线的match函数和probe函数等，然后调用driver_register（传入driver参数而不是i2c_driver）这个通用的驱动注册函数，在这个函数中会执行driver中的bus_type中的match函数，匹配成功后进入该总线的probe函数，在该总线的probe函数中再调用你写的驱动的probe函数，在i2c总线的probe函数中会对i2c驱动中的match_id（compatible属性）进行匹配，找到i2c控制器（i2c_client）并传给驱动的probe函数.
+i2c的device是怎么注册到内核的：是通过platform总线匹配后执行的i2c控制器的probe函数，在其中调用i2c_add_adapter，然后解析他的的子节点然后将device注册到内核的.
+
+为啥 struct device 和 struct device_driver 都要有 struct bus_type *bus 成员？
+因为在 Linux 的通用设备模型中，“总线是连接设备和驱动的媒介”。
+设备和驱动都要声明自己是在哪条总线上，只有在同一总线下，才会尝试匹配和绑定
+
+tags使用：g+ctrl+]:跳转函数或者变量定义  ctrl+o:返回    vim -t 函数名 
+
+IIO 提供了 标准的驱动框架、缓存机制、触发机制（trigger）、buffer 和 用户空间接口（sysfs、character device、ioctl）。
+使用 IIO 的好处：
+一致的接口；
+支持批量采样（buffered mode）；
+支持事件/触发器；
+其他工业传感器配合良好。
+
+每个dev都有一个私有数据结构体
+
+互斥量（mutex）是一种用于线程同步的机制。在其内部结构中，通常包含一个表示当前拥有者（owner）的字段，用于记录哪个线程当前持有该锁。互斥量要求只能由加锁的线程进行解锁，以保证对临界资源的互斥访问。
+
+UART 是实现串口通信的硬件模块，串口是 UART 的物理接口，tty 是操作系统中对应串口的字符设备文件。
+
+clangd：基于 compile_commands.json 分析源码，提供代码补全、跳转定义和诊断，是 C/C++ 的语言服务器。
+bear：拦截编译命令生成 compile_commands.json，记录每个源文件的编译环境，让 clangd 或 IDE 能理解项目结构。
+make根据每级目录下的 Makefile + 顶层 Makefile 的规则 + 内核构建系统的约定 一起工作，让 make 能快速定位源文件。
+

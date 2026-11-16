@@ -1,0 +1,236 @@
+{
+  "main": {
+    "id": "df2acc2acf84a205",
+    "type": "split",
+    "children": [
+      {
+        "id": "432ccec9c6e4a020",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5b93fa2dc6ba0ee1",
+            "type": "leaf",
+            "state": {
+              "type": "mindmapview",
+              "state": {
+                "file": "考研/408/数据结构/数据结构-树形思维导图.md"
+              },
+              "icon": "blocks",
+              "title": "数据结构-树形思维导图"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "78f8b73564324565",
+    "type": "split",
+    "children": [
+      {
+        "id": "b4844035de86dcfb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3a764600c96e7fa3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTimeReverse",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "1cedc0a785529c36",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          },
+          {
+            "id": "fb1481b9e583d56f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "考研/408/计算机组成原理/计算机组成原理-树形思维导图.md",
+                "followCursor": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "计算机组成原理-树形思维导图 的大纲"
+            }
+          },
+          {
+            "id": "d386cc12ad333dcd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 350.8359184265137
+  },
+  "right": {
+    "id": "bd699a303b7a7ac0",
+    "type": "split",
+    "children": [
+      {
+        "id": "b8a7f23deaacc01a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "436591bbe66ef098",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "考研/408/计算机网络.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "计算机网络 的反向链接列表"
+            }
+          },
+          {
+            "id": "4258cfc5eafc13c9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "考研/408/计算机网络.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "计算机网络 的出链列表"
+            }
+          },
+          {
+            "id": "26398606bf9cf5f2",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "55ae0e95075fe3a9",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "3a764600c96e7fa3",
+  "lastOpenFiles": [
+    "金融/反思.docx",
+    "金融/从书中学到的.docx",
+    "技术/嵌入式/linux内核知识.docx",
+    "技术/嵌入式/STM32基础.txt",
+    "技术/嵌入式/linux驱动总结.txt",
+    "技术/嵌入式/单片机知识.docx",
+    "技术/嵌入式/在项目中学到的.docx",
+    "技术/嵌入式/杂七杂八的知识.docx",
+    "技术/嵌入式",
+    "考研/408/计算机网络/计算机网络-树形思维导图.md",
+    "考研/英语/英语大作文模板.md",
+    "考研/408/数据结构/数据结构-树形思维导图.md",
+    "考研/408/计算机组成原理/计算机组成原理-树形思维导图.md",
+    "考研/408/操作系统/操作系统.md",
+    "考研/408/数据结构/数据结构-树形思维导图.sync-conflict-20260928-173148-TLLBXAY.md",
+    "考研/数学/大观/线代大观.md",
+    "考研/408/计算机组成原理/计算机组成原理-树形思维导图.sync-conflict-20261002-145520-TLLBXAY.md",
+    "考研/408/计算机组成原理/~syncthing~计算机组成原理-树形思维导图.sync-conflict-20261002-145520-TLLBXAY.md.tmp",
+    "考研/数学/大观/~syncthing~线代大观.md.tmp",
+    "金融/币安alpha上合约且市值低没太涨过.md",
+    "技术/rk3568.md",
+    "技术/云服务器.md",
+    "金融/交易标的.md",
+    "金融/成为一名交易员的计划.md",
+    "考研/数学/660/一元函数微分学.md",
+    "考研/数学/计算错误   每算一步立马检查一步，不跳步.md",
+    "考研/数学/未命名思维导图.md",
+    "考研/408/计算机网络/计算机网络-树形思维导图.sync-conflict-20260907-215224-TLLBXAY.md",
+    "考研/英语/未命名.md",
+    "考研/数学/大观/二重积分大观.md",
+    "考研/数学/线性代数/线代基础.md",
+    "考研/数学/大观/多元微分大观.md",
+    "考研/数学/每日一背.md",
+    "金融/随笔.md",
+    "考研/数学/数学规划.md",
+    "考研/数学/基础30讲/第四章：一元函数微分学计算.md",
+    "考研/408/计算机网络-树形思维导图.png",
+    "考研/408/计算机网络-树形思维导图.svg",
+    "考研/arcsinx.drawio.png",
+    "arccot.drawio 1.png",
+    "arccot.drawio.png",
+    "考研/arccotx.drawio.png",
+    "考研/arccos.drawio.png",
+    "考研/arctanx.drawio.png",
+    "arcsinx.drawio 1.png",
+    "hhh.drawio.png"
+  ]
+}
